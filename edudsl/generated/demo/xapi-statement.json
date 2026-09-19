@@ -1,0 +1,27 @@
+{
+  "actor": {
+    "objectType": "Agent",
+    "account": {
+      "homePage": "https://example.org",
+      "name": "anonymous-2a7e522fda1a3ebe"
+    }
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/initialized",
+    "display": {
+      "fr-FR": "a commencé"
+    }
+  },
+  "object": {
+    "id": "https://example.org/edudsl/IntroductionPython",
+    "definition": {
+      "name": {
+        "fr-FR": "IntroductionPython"
+      }
+    }
+  },
+  "context": {
+    "platform": "EduDSL",
+    "language": "fr-FR"
+  }
+}

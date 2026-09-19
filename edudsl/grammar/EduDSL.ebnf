@@ -1,0 +1,23 @@
+(* EduDSL — EBNF de référence du prototype *)
+programme      = "Cours" , identifiant , "{" , metadata , securite_opt , activites , export_opt , "}" , "FinCours" ;
+metadata       = "metadata" , "{" , "objectif" , "=" , chaine , "niveau" , "=" , chaine , "auteur" , "=" , chaine , "}" ;
+securite_opt   = [ securite ] ;
+securite       = "securite" , "{" , { secure_endpoint | encrypted_trace | oauth2 } , "}" ;
+secure_endpoint= "secureEndpoint" , chaine ;
+encrypted_trace= "encryptedTrace" , "xapi" , "{" , "pseudonymize" , "actor" , "}" ;
+oauth2         = "oauth2" , "clientId" , "=" , chaine , "scope" , "=" , chaine ;
+activites      = { activite } ;
+activite       = "activite" , "quiz" , identifiant , "{" , { question } , "}" ;
+question       = "question" , chaine , "{" , { option } , "}" ;
+option         = "option" , chaine , [ "correct" ] ;
+export_opt     = [ export ] ;
+export         = "export" , "{" , { scorm | lti | xapi_export | cmi5 } , "}" ;
+scorm          = "scorm" , chaine ;
+lti            = "lti" , chaine ;
+xapi_export    = "xapi" ;
+cmi5           = "cmi5" ;
+identifiant    = lettre , { lettre | chiffre | "_" } ;
+chaine         = '"' , { caractere } , '"' ;
+lettre         = "A"…"Z" | "a"…"z" | "_" ;
+chiffre        = "0"…"9" ;
+caractere      = ? tout caractère sauf guillemet non échappé ? ;

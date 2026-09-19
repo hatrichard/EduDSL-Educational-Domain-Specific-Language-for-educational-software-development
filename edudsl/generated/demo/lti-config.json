@@ -1,0 +1,9 @@
+{
+  "specification": "LTI 1.3 / LTI Advantage",
+  "issuer": "https://example.org",
+  "deploymentId": "CHANGE_ME",
+  "clientId": "demo-client",
+  "authorizationEndpoint": "https://lms.example.org/oauth2/authorize",
+  "jwksEndpoint": "https://lms.example.org/.well-known/jwks.json",
+  "note": "Configurer les valeurs avec le LMS cible; EduDSL ne génère pas de secrets privés."
+}

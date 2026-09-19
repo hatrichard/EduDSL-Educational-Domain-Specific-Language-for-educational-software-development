@@ -1,0 +1,34 @@
+Cours IntroductionPython {
+  metadata {
+    objectif = "Comprendre les variables en Python"
+    niveau = "Débutant"
+    auteur = "EduDSL Demo"
+  }
+
+  securite {
+    secureEndpoint "https://lrs.example.org/xapi"
+    encryptedTrace xapi { pseudonymize actor }
+    oauth2 clientId = "demo-client" scope = "xapi.write"
+  }
+
+  activite quiz Diagnostic {
+    question "Que représente une variable ?" {
+      option "Une valeur nommée" correct
+      option "Une image uniquement"
+      option "Un câble réseau"
+    }
+    question "Quel mot-clé affiche une valeur en Python ?" {
+      option "print" correct
+      option "displaySQL"
+      option "showHTML"
+    }
+  }
+
+  export {
+    scorm "2004"
+    lti "1.3"
+    xapi
+    cmi5
+  }
+}
+FinCours

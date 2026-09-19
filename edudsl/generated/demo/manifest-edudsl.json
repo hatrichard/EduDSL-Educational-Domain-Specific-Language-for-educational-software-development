@@ -1,0 +1,10 @@
+{
+  "name": "IntroductionPython",
+  "version": "0.1.0",
+  "generator": "EduDSL",
+  "metadata": {
+    "objectif": "Comprendre les variables en Python",
+    "niveau": "Débutant",
+    "auteur": "EduDSL Demo"
+  }
+}

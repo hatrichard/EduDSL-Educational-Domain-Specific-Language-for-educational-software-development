@@ -1,0 +1,9 @@
+{
+  "endpoint": "https://lrs.example.org/xapi",
+  "encryptedTrace": true,
+  "pseudonymizeActor": true,
+  "oauth2": {
+    "clientId": "demo-client",
+    "scope": "xapi.write"
+  }
+}
